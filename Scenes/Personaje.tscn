@@ -1,0 +1,202 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://Sprites/player/john_run.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/player/john_idle.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/player/john_jump.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Bullet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/Pixel Heart Sprite Sheet 16x16.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/player/john_hithurt.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/ui/gun_icon.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Inside.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Under.png" type="Texture" id=10]
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 7 )
+region = Rect2( 26, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
+region = Rect2( 26, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 52, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 3 )
+region = Rect2( 78, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 3 )
+region = Rect2( 104, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 4 )
+region = Rect2( 26, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 4 )
+region = Rect2( 52, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 4 )
+region = Rect2( 78, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 4 )
+region = Rect2( 104, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 4 )
+region = Rect2( 130, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 4 )
+region = Rect2( 156, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 4 )
+region = Rect2( 182, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 4 )
+region = Rect2( 208, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 26, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 52, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 78, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 104, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 130, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 156, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 182, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 208, 0, 26, 22 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 234, 0, 26, 22 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 30 ), SubResource( 31 ) ],
+"loop": true,
+"name": "Damage",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.75, 7.25 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+bullet = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 15 )
+animation = "Damage"
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.25, 3.25 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 53, 0 )
+current = true
+zoom = Vector2( 0.25, 0.25 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.3
+drag_margin_top = 0.4
+drag_margin_right = 0.3
+drag_margin_bottom = 0.01
+editor_draw_drag_margin = true
+
+[node name="Shoot" type="Position2D" parent="."]
+
+[node name="Direction" type="Position2D" parent="Shoot"]
+position = Vector2( 12, 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2, -13 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+hframes = 3
+
+[node name="Vidas" type="Label" parent="Sprite"]
+margin_left = -20.0
+margin_top = -6.0
+margin_right = 4.0
+margin_bottom = 8.0
+text = "3"
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = -13.0
+margin_top = -21.0
+margin_right = 17.0
+margin_bottom = -19.0
+value = 100.0
+texture_under = ExtResource( 10 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+
+[node name="Sprite" type="Sprite" parent="TextureProgress"]
+position = Vector2( -6, 1 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="Timer" type="Timer" parent="TextureProgress"]
