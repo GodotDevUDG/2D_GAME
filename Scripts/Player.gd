@@ -12,6 +12,8 @@ onready var animatedSprite = $AnimatedSprite
 var _posInicial: Vector2
 export var _nvides:= 3 
 var motion = Vector2()
+var isShooting = false;
+var cooldownShoot = 0;
 
 func set_pos_start(pos:Vector2):
 	position = pos
@@ -34,28 +36,46 @@ func _physics_process(delta):
 	
 	motion.y += gravity
 	var friction = false
+	cooldownShoot+=delta
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		shootBullet()
+		cooldownShoot=0
+		isShooting=true;
+		
+	if(cooldownShoot>0.3):
+		isShooting=false
 	
-	if Input.is_action_pressed("ui_right"):
+	
+	if Input.is_action_pressed("ui_up"):
+		if(isShooting):
+			animatedSprite.play("RunShoot")
+		else:
+			animatedSprite.play("Jump")
+	elif Input.is_action_pressed("ui_right"):
 		animatedSprite.flip_h = false
-		animatedSprite.play("Run")
+		if(isShooting):
+			animatedSprite.play("RunShoot")
+		else:
+			animatedSprite.play("Run")
 		motion.x = min(motion.x + moveSpeed,maxSpeed)
-	
 	elif Input.is_action_pressed("ui_left"):
 		animatedSprite.flip_h = true
-		animatedSprite.play("Run")
-		motion.x = max(motion.x - moveSpeed,-maxSpeed)
-	
+		if(isShooting):
+			animatedSprite.play("RunShoot")
+		else:
+			animatedSprite.play("Run")
+		motion.x = max(motion.x - moveSpeed,-maxSpeed)	
 	else:
-		animatedSprite.play("Idle")
+		if(isShooting):
+			animatedSprite.play("Shoot")
+		else:
+			animatedSprite.play("Idle")
 		friction = true 
 	
 	if is_on_floor():
 		if Input.is_action_pressed("ui_up"):
 			motion.y = jumpHeight
-			animatedSprite.play("Jump")
 		if friction == true:
 			motion.x = lerp(motion.x,0,0.5)
 	else:

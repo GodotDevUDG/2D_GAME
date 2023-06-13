@@ -1,141 +1,70 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=33 format=2]
 
-[ext_resource path="res://Sprites/player/john_run.png" type="Texture" id=1]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/player-run/player-run5.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/player/john_idle.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/player/john_jump.png" type="Texture" id=4]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-idle/player-idle4.png" type="Texture" id=3]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-jump/player-jump2.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Bullet.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/Pixel Heart Sprite Sheet 16x16.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/player/john_hithurt.png" type="Texture" id=7]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-Hurt/player-hurt1.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/ui/gun_icon.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Inside.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Under.png" type="Texture" id=10]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-idle/player-idle2.png" type="Texture" id=11]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-idle/player-idle1.png" type="Texture" id=12]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-idle/player-idle3.png" type="Texture" id=13]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-idle/player-idle6.png" type="Texture" id=14]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-idle/player-idle5.png" type="Texture" id=15]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-jump/player-jump1.png" type="Texture" id=16]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/player-run/player-run2.png" type="Texture" id=17]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/player-run/player-run1.png" type="Texture" id=18]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/player-run/player-run3.png" type="Texture" id=19]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/player-run/player-run4.png" type="Texture" id=20]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/player-run/player-run6.png" type="Texture" id=21]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-Hurt/player-hurt2.png" type="Texture" id=22]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott3.png" type="Texture" id=23]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott2.png" type="Texture" id=24]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott1.png" type="Texture" id=25]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott6.png" type="Texture" id=26]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott5.png" type="Texture" id=29]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott4.png" type="Texture" id=30]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-shoot/player-shoot3.png" type="Texture" id=31]
 
-[sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 7 )
-region = Rect2( 26, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 3 )
-region = Rect2( 26, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 3 )
-region = Rect2( 52, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 3 )
-region = Rect2( 78, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 3 )
-region = Rect2( 104, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 4 )
-region = Rect2( 26, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 4 )
-region = Rect2( 52, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 4 )
-region = Rect2( 78, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 4 )
-region = Rect2( 104, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 4 )
-region = Rect2( 130, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 4 )
-region = Rect2( 156, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 4 )
-region = Rect2( 182, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 4 )
-region = Rect2( 208, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
-region = Rect2( 26, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 1 )
-region = Rect2( 52, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
-region = Rect2( 78, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 1 )
-region = Rect2( 104, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 1 )
-region = Rect2( 130, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 1 )
-region = Rect2( 156, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 1 )
-region = Rect2( 182, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 1 )
-region = Rect2( 208, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 1 )
-region = Rect2( 234, 0, 26, 22 )
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 32, 38 )
 
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ SubResource( 30 ), SubResource( 31 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "Damage",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"frames": [ SubResource( 32 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 15 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "Jump",
-"speed": 10.0
+"speed": 1.0
 }, {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"frames": [ ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 1 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "Run",
-"speed": 10.0
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "RunShoot",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": false,
+"name": "Shoot",
+"speed": 20.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -146,9 +75,9 @@ script = ExtResource( 2 )
 bullet = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 15 )
-animation = "Damage"
-frame = 1
+animation = "Shoot"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.25, 3.25 )

@@ -1,72 +1,23 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Sprites/enemy/grunt_run.png" type="Texture" id=1]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/Slime/slime1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/enemy/grunt_death_2.png" type="Texture" id=3]
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 3 )
-region = Rect2( 26, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 3 )
-region = Rect2( 52, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
-region = Rect2( 26, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 1 )
-region = Rect2( 52, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
-region = Rect2( 78, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 1 )
-region = Rect2( 104, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
-region = Rect2( 130, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 1 )
-region = Rect2( 156, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
-region = Rect2( 182, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 1 )
-region = Rect2( 208, 0, 26, 22 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 1 )
-region = Rect2( 234, 0, 26, 22 )
+[ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/Slime/slime2.png" type="Texture" id=3]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/Slime/slime3.png" type="Texture" id=4]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/Slime/slime4.png" type="Texture" id=5]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/Slime/slime5.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"frames": [  ],
 "loop": true,
 "name": "Damage",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Run",
-"speed": 8.0
+"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=12]
@@ -76,8 +27,10 @@ extents = Vector2( 4.5, 7.125 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 11 )
 animation = "Damage"
+flip_h = true
 
 [node name="FloorDetection" type="RayCast2D" parent="AnimatedSprite"]
 position = Vector2( 10, 0 )
@@ -100,3 +53,9 @@ cast_to = Vector2( 10, 0 )
 position = Vector2( -2, 0 )
 enabled = true
 cast_to = Vector2( 0, -15 )
+
+[node name="PlayerDetection" type="RayCast2D" parent="."]
+position = Vector2( 4.76837e-07, 0 )
+scale = Vector2( 1, 1 )
+enabled = true
+cast_to = Vector2( -93, 0 )
