@@ -23,7 +23,7 @@ func _on_Bullet_body_entered(body):
 		body.Damage_Gun()
 		velocity=0
 		var enemy = body
-		enemy.hits += 1
+		enemy.hits += 3
 		if enemy.hits >= 3:
 			body.queue_free()
 	else:

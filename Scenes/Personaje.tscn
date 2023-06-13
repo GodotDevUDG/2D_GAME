@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/player-run/player-run5.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott2.png" type="Texture" id=24]
 [ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott1.png" type="Texture" id=25]
 [ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott6.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/SpecialBullet.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott5.png" type="Texture" id=29]
 [ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-run-shoot/player-run-shoott4.png" type="Texture" id=30]
 [ext_resource path="res://Super Grotto Escape Files/Characters/Player/sprites/Player-shoot/player-shoot3.png" type="Texture" id=31]
@@ -68,11 +69,12 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5.75, 7.25 )
+extents = Vector2( 5.75, 8.5 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 bullet = ExtResource( 5 )
+specialbullet = ExtResource( 27 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.7, 0.7 )
@@ -80,7 +82,7 @@ frames = SubResource( 15 )
 animation = "Shoot"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.25, 3.25 )
+position = Vector2( -1.25, 4.5 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -118,7 +120,6 @@ margin_left = -13.0
 margin_top = -21.0
 margin_right = 17.0
 margin_bottom = -19.0
-value = 100.0
 texture_under = ExtResource( 10 )
 texture_progress = ExtResource( 9 )
 nine_patch_stretch = true
