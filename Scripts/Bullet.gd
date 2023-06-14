@@ -18,7 +18,6 @@ func start_timer():
 	queue_free()
 
 func _on_Bullet_body_entered(body):
-	print(body.get_name().substr(0, 5))
 	if body.get_name().substr(0, 5) == "Enemy" || body.get_name().substr(0, 5) == "@Enem":
 		
 		$AnimatedSprite.play("Explosion")

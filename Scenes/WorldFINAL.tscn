@@ -70,7 +70,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 6/shapes = [  ]
 6/z_index = 0
 
-[node name="World" type="Node2D" groups=["World", "World2"]]
+[node name="World" type="Node2D" groups=["World", "World2", "World4"]]
 position = Vector2( 1, 0 )
 script = ExtResource( 3 )
 Enemy = ExtResource( 4 )

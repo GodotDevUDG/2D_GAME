@@ -14,13 +14,13 @@ dest_files=[ "res://.import/explosion2.png-9572880de31aed7de6ae61abd4ce906b.stex
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

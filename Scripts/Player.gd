@@ -3,7 +3,7 @@ class_name Personatge extends KinematicBody2D
 export (PackedScene) var bullet
 export (PackedScene) var specialbullet
 const moveSpeed = 25
-export var maxSpeed = 80
+export var maxSpeed = 100
 
 const jumpHeight = -320
 const up = Vector2(0,-1)
@@ -27,6 +27,7 @@ func _respawn():
 	motion = Vector2()
 
 func suma_vides(vidas:int):
+	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	_nvides += vidas
 	if _nvides == 0:
 		get_tree().change_scene("res://Scenes/End.tscn") 
