@@ -43,6 +43,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		shootBullet()
+		$AudioStreamPlayer2D.playing = true
 		cooldownShoot=0
 		isShooting=true;
 		
@@ -51,6 +52,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("ui_shift") and highShoot:
 		shootSpecialBullet()
+		$AudioStreamPlayer2D2.playing = true
 		cooldownShoot=0
 		isShooting=true;
 		highShoot = false
