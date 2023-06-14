@@ -24,7 +24,7 @@ func shoot():
 	yield(get_tree().create_timer(10.0), "timeout")
 	isShooting = false
 	$AnimatedSprite.stop()
-	$AnimatedSprite.play("Damage")
+	$AnimatedSprite.play("Shoot")
 	motion.x /= 1000
 	yield($AnimatedSprite,"animation_finished")
 	

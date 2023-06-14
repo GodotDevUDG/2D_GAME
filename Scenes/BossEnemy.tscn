@@ -12,7 +12,7 @@
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 9 ) ],
+"frames": [  ],
 "loop": true,
 "name": "Damage",
 "speed": 5.0
@@ -21,6 +21,11 @@ animations = [ {
 "loop": true,
 "name": "Run",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Shooot",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=12]
@@ -34,7 +39,6 @@ shoot = ExtResource( 5 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 11 )
 animation = "Damage"
-frame = 2
 offset = Vector2( 0, -10 )
 flip_h = true
 
@@ -44,7 +48,7 @@ enabled = true
 cast_to = Vector2( 0, 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.25, 3.875 )
+position = Vector2( -4, 3 )
 shape = SubResource( 12 )
 
 [node name="LeftRay" type="RayCast2D" parent="."]
@@ -66,7 +70,7 @@ enabled = true
 cast_to = Vector2( -88, 0 )
 
 [node name="Shoot" type="Position2D" parent="."]
-position = Vector2( 14, -8 )
+position = Vector2( -2, -8 )
 
 [node name="Direction" type="Position2D" parent="Shoot"]
-position = Vector2( 28, 1 )
+position = Vector2( 19, 1 )
