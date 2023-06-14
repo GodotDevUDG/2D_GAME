@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Super Grotto Escape Files/Environment/Layers/tiledemo.png" type="Texture" id=1]
 [ext_resource path="res://Super Grotto Escape Files/Environment/Layers/tileset-2.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/WorldFinal.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/BossEnemy.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -73,13 +74,14 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 position = Vector2( 1, 0 )
 script = ExtResource( 3 )
 Enemy = ExtResource( 4 )
+Boss = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 1, 0 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -1048576, 5, 0, -1048545, 5, 0, -983040, 5, 0, -983009, 5, 0, -917504, 5, 0, -917473, 5, 0, -851968, 5, 0, -851937, 5, 0, -786432, 5, 0, -786401, 5, 0, -720896, 5, 0, -720865, 5, 0, -655360, 5, 0, -655329, 5, 0, -589824, 5, 0, -589793, 5, 0, -524288, 5, 0, -524257, 5, 0, -458752, 5, 0, -458721, 5, 0, -393216, 5, 0, -393185, 5, 0, -327680, 5, 0, -327649, 5, 0, -262144, 5, 0, -262113, 5, 0, -196608, 5, 0, -196577, 5, 0, -131072, 5, 0, -131041, 5, 0, -65505, 5, 0, 0, 5, 0, 2, 5, 0, 4, 5, 0, 6, 5, 0, 8, 5, 0, 10, 5, 0, 12, 5, 0, 14, 5, 0, 16, 5, 0, 18, 5, 0, 20, 5, 0, 22, 5, 0, 24, 5, 0, 26, 5, 0, 27, 5, 0, 28, 5, 0, 29, 5, 0, 30, 5, 0, 31, 5, 0 )
+tile_data = PoolIntArray( -1048576, 5, 0, -1048545, 5, 0, -983040, 5, 0, -983009, 5, 0, -917504, 5, 0, -917473, 5, 0, -851968, 5, 0, -851937, 5, 0, -786432, 5, 0, -786401, 5, 0, -720896, 5, 0, -720865, 5, 0, -655360, 5, 0, -655329, 5, 0, -589824, 5, 0, -589793, 5, 0, -524288, 5, 0, -524257, 5, 0, -458752, 5, 0, -458739, 4, 0, -458738, 4, 0, -458734, 4, 0, -458733, 4, 0, -458721, 5, 0, -393216, 5, 0, -393185, 5, 0, -327680, 5, 0, -327671, 4, 0, -327670, 4, 0, -327669, 4, 0, -327659, 4, 0, -327658, 4, 0, -327657, 4, 0, -327649, 5, 0, -262144, 5, 0, -262113, 5, 0, -196608, 5, 0, -196604, 4, 0, -196603, 4, 0, -196602, 4, 0, -196582, 4, 0, -196581, 4, 0, -196580, 4, 0, -196577, 5, 0, -131072, 5, 0, -131041, 5, 0, -65505, 5, 0, 0, 5, 0, 2, 5, 0, 4, 5, 0, 6, 5, 0, 8, 5, 0, 10, 5, 0, 12, 5, 0, 14, 5, 0, 16, 5, 0, 18, 5, 0, 20, 5, 0, 22, 5, 0, 24, 5, 0, 26, 5, 0, 27, 5, 0, 28, 5, 0, 29, 5, 0, 30, 5, 0, 31, 5, 0 )
 
 [node name="StartPoint" type="Position2D" parent="." groups=["Enemies"]]
 position = Vector2( 150, -28 )

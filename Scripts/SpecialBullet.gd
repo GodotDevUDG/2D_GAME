@@ -23,8 +23,16 @@ func _on_Bullet_body_entered(body):
 		body.Damage_Gun()
 		velocity=0
 		var enemy = body
-		enemy.hits += 3
+		enemy.hits += 5
 		if enemy.hits >= 3:
+			body.queue_free()
+	elif body.get_name().substr(0, 5) == "BossE":
+		$AnimatedSprite.play("Explosion")
+		body.Damage_Gun()
+		velocity=0
+		var enemy = body
+		enemy.hits += 5
+		if enemy.hits >= 50:
 			body.queue_free()
 	else:
 		$AnimatedSprite.play("Explosion")

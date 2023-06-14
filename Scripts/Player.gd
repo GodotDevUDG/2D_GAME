@@ -147,3 +147,5 @@ func sumar_energia():
 func restaurar_energia():
 	energia = 0
 	$TextureProgress.value = 0
+func changeZoom(newZoom):
+	$Camera2D.zoom*=1.5

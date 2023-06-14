@@ -87,6 +87,7 @@ shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 53, 0 )
+rotating = true
 current = true
 zoom = Vector2( 0.25, 0.25 )
 drag_margin_h_enabled = true

@@ -18,13 +18,23 @@ func start_timer():
 	queue_free()
 
 func _on_Bullet_body_entered(body):
-	if body.get_name().substr(0, 5) == "Enemy":
+	print(body.get_name().substr(0, 5))
+	if body.get_name().substr(0, 5) == "Enemy" || body.get_name().substr(0, 5) == "@Enem":
+		
 		$AnimatedSprite.play("Explosion")
 		body.Damage_Gun()
 		velocity=0
 		var enemy = body
 		enemy.hits += 1
 		if enemy.hits >= 3:
+			body.queue_free()
+	elif body.get_name().substr(0, 5) == "BossE":
+		$AnimatedSprite.play("Explosion")
+		body.Damage_Gun()
+		velocity=0
+		var enemy = body
+		enemy.hits += 1
+		if enemy.hits >= 50:
 			body.queue_free()
 	else:
 		$AnimatedSprite.play("Explosion")

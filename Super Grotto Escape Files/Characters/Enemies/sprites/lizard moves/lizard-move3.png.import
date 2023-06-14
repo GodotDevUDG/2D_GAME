@@ -14,13 +14,13 @@ dest_files=[ "res://.import/lizard-move3.png-565e5eb148e61b8772a3d0e63a0f2f1e.st
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

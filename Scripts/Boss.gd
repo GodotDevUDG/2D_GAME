@@ -12,7 +12,7 @@ var floorDetection=true;
 
 func _ready():
 	Enemy.play("Run")
-	Enemy.scale.x= -1
+	Enemy.scale.x*= -1
 	motion.x = -maxSpeed
 	
 	
