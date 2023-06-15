@@ -18,10 +18,11 @@ func _ready():
 	Enemy.play("Run")
 	Enemy.scale.x*= -1
 	motion.x = -maxSpeed
+	$Shoot.transform.x*=-1
 	shoot()
 	
 func shoot():
-	yield(get_tree().create_timer(10.0), "timeout")
+	yield(get_tree().create_timer(3.0), "timeout")
 	isShooting = false
 	$AnimatedSprite.stop()
 	$AnimatedSprite.play("Shoot")
@@ -30,6 +31,7 @@ func shoot():
 	
 	
 	var target = self.get_parent().get_child(2).position
+	target.y+=6;
 	var direction = (target-position).normalized()
 	var shoot_bullet = shoot.instance()
 	shoot_bullet.set_direction(direction)
@@ -91,8 +93,24 @@ func _flip():
 	
 func _physics_process(delta):
 	motion.y += gravity
+	if(isShooting):
+		var target = self.get_parent().get_child(2).position
+		var direction = (target-position).normalized()
+		var ogMotion = motion.x
+		motion.x=direction.x*maxSpeed
+		if(ogMotion < 0 && motion.x > 0 || ogMotion > 0 && motion.x < 0):
+			direction = !direction
+			Enemy.scale.x *= -1
+			$PlayerDetection.transform.x*=-1
+			$Shoot.transform.x*=-1
+	
 	_flip()
+	
 	motion = move_and_slide(motion)
+
+func auxFlip():
+	if str($LeftRay.get_collider()).substr(0, 6) == "Player":
+		$LeftRay.get_collider().suma_vides(-1)
 
 func Damage_Gun():
 	Enemy.stop()
