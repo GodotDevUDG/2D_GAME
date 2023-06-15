@@ -26,11 +26,14 @@ func shoot():
 	isShooting = false
 	$AnimatedSprite.stop()
 	$AnimatedSprite.play("Shoot")
+	$Walk.playing = false
+	$Shooting.playing = true
 	motion.x /= 1000
 	yield($AnimatedSprite,"animation_finished")
+	$Walk.playing = true
 	
 	
-	var target = self.get_parent().get_child(2).position
+	var target = self.get_parent().get_child(3).position
 	target.y+=6;
 	var direction = (target-position).normalized()
 	var shoot_bullet = shoot.instance()
@@ -94,7 +97,7 @@ func _flip():
 func _physics_process(delta):
 	motion.y += gravity
 	if(isShooting):
-		var target = self.get_parent().get_child(2).position
+		var target = self.get_parent().get_child(3).position
 		var direction = (target-position).normalized()
 		var ogMotion = motion.x
 		motion.x=direction.x*maxSpeed

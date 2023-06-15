@@ -15,6 +15,7 @@ export var _nvides:= 3
 var motion = Vector2()
 var isShooting = false;
 var cooldownShoot = 0;
+var caminant = false
 
 var highShoot = false;
 
@@ -65,6 +66,8 @@ func _physics_process(delta):
 			animatedSprite.play("RunShoot")
 		else:
 			animatedSprite.play("Jump")
+			$Walk.playing = false
+			caminant = false
 
 	elif Input.is_action_pressed("ui_right"):
 		animatedSprite.flip_h = false
@@ -72,6 +75,9 @@ func _physics_process(delta):
 			animatedSprite.play("RunShoot")
 		else:
 			animatedSprite.play("Run")
+			if !caminant:
+				$Walk.playing = true
+				caminant = true
 		motion.x = min(motion.x + moveSpeed,maxSpeed)
 
 	elif Input.is_action_pressed("ui_left"):
@@ -80,12 +86,17 @@ func _physics_process(delta):
 			animatedSprite.play("RunShoot")
 		else:
 			animatedSprite.play("Run")
+			if !caminant:
+				$Walk.playing = true
+				caminant = true
 		motion.x = max(motion.x - moveSpeed,-maxSpeed)	
 	else:
 		if(isShooting):
 			animatedSprite.play("Shoot")
 		else:
 			animatedSprite.play("Idle")
+			$Walk.playing = false
+			caminant = false
 		friction = true 
 	
 	if is_on_floor():

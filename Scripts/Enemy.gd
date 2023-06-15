@@ -24,12 +24,14 @@ func _process(delta):
 			motion.x=-maxSpeed
 		else:
 			motion.x=maxSpeed
+		
 	else:
 		maxSpeed=30
 		if(motion.x<0):
 			motion.x=-maxSpeed
 		else:
 			motion.x=maxSpeed
+		
 
 func _flip():
 	
