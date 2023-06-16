@@ -8,6 +8,7 @@ var motion = Vector2()
 onready var Enemy = $AnimatedSprite
 var hit=0
 var floorDetection=true;
+var entered = false;
 
 
 func _ready():
@@ -50,10 +51,11 @@ func _flip():
 		motion.x *= -1
 		Enemy.scale.x *= -1
 		$PlayerDetection.transform.x*=-1
-	elif $LeftRay.is_colliding() or $RightRay.is_colliding() or !$AnimatedSprite/FloorDetection.is_colliding() && floorDetection:
+	elif $LeftRay.is_colliding() or $RightRay.is_colliding() or (!$AnimatedSprite/FloorDetection.is_colliding() && floorDetection) && !entered:
 		motion.x *= -1
 		Enemy.scale.x *= -1
 		$PlayerDetection.transform.x*=-1
+		
 	
 func _physics_process(delta):
 	motion.y += gravity

@@ -11,7 +11,7 @@ func _ready():
 	_pers.set_pos_start($StartPoint.position)
 	_pers.changeZoom(2)
 	add_child(_pers) 
-	for i in range(1):
+	for i in range(10):
 		yield(get_tree().create_timer(2.0), "timeout")
 		print(i)
 		generateEnemy()
@@ -32,18 +32,18 @@ func _on_Area2D_objetiu_assolit(player):
 	get_node("/root/inici").canvia_nivell()
 	
 func generateEnemy():
-	var randomX = rng.randf_range(60, 500)
+	var randomX = 598
 	var enem = Enemy.instance()
 	enem.global_position.x = randomX
-	enem.global_position.y = -270
+	enem.global_position.y = -513
 	enem.changeFloorDetection()
 	get_tree().call_group("World2","add_child",enem)
 	pass
 
 func generateBoss():
-	#265 -230
+	print("a")
 	var boss = Boss.instance()
-	boss.global_position.x=265
-	boss.global_position.y=-230
+	boss.global_position.x=554
+	boss.global_position.y=-212
 	get_tree().call_group("World2","add_child",boss)
 	pass
