@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fan1.png-a53bc9e30f22815086ef1f29fe96d64a.stex"
+path="res://.import/lizard-damege.png-149a4d7f01a87b619660b86769a37bba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Super Grotto Escape Files/Props/Sprites/Fan/fan1.png"
-dest_files=[ "res://.import/fan1.png-a53bc9e30f22815086ef1f29fe96d64a.stex" ]
+source_file="res://Super Grotto Escape Files/Characters/Enemies/sprites/lizard moves/lizard-damege.png"
+dest_files=[ "res://.import/lizard-damege.png-149a4d7f01a87b619660b86769a37bba.stex" ]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/lizard moves/lizard-move1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Boss.gd" type="Script" id=2]
@@ -11,10 +11,11 @@
 [ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/lizard shoots/lizard-shoot4.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/dinosaur.wav" type="AudioStream" id=10]
 [ext_resource path="res://Sprites/fireball.wav" type="AudioStream" id=11]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/lizard moves/lizard-damege.png" type="Texture" id=12]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 12 ) ],
 "loop": true,
 "name": "Damage",
 "speed": 5.0

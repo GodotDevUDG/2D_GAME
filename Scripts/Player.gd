@@ -28,7 +28,6 @@ func _respawn():
 	motion = Vector2()
 
 func suma_vides(vidas:int):
-	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	_nvides += vidas
 	if _nvides == 0:
 		get_tree().change_scene("res://Scenes/End.tscn") 
