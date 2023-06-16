@@ -10,7 +10,7 @@ const gravity = 15
 var motion = Vector2()
 onready var Enemy = $AnimatedSprite
 var hit=0
-var floorDetection=true;
+var floorDetection=false;
 var isShooting = true
 var direction = false
 
@@ -33,7 +33,7 @@ func shoot():
 	$Walk.playing = true
 	
 	
-	var target = self.get_parent().get_child(3).position
+	var target = self.get_parent().get_child(7).position
 	target.y+=6;
 	var direction = (target-position).normalized()
 	var shoot_bullet = shoot.instance()
@@ -41,15 +41,6 @@ func shoot():
 
 	shoot_bullet.global_position = $Shoot/Direction.global_position
 	get_tree().call_group("World","add_child",shoot_bullet)
-#	var shoot_bullet = shoot.instance()
-#	if not direction:
-#		$Shoot.scale.x = -1
-#		shoot_bullet.velocity = -220
-#	else:
-#		$Shoot.scale.x = 1
-#		shoot_bullet.velocity = 220
-#	shoot_bullet.global_position = $Shoot/Direction.global_position
-#	get_tree().call_group("World4","add_child",shoot_bullet)
 	$AnimatedSprite.play("Run")
 	isShooting = true
 	shoot()
@@ -97,7 +88,7 @@ func _flip():
 func _physics_process(delta):
 	motion.y += gravity
 	if(isShooting):
-		var target = self.get_parent().get_child(3).position
+		var target = self.get_parent().get_child(7).position
 		var direction = (target-position).normalized()
 		var ogMotion = motion.x
 		motion.x=direction.x*maxSpeed

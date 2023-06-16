@@ -80,3 +80,5 @@ func playerDetection():
 
 func changeFloorDetection():
 	floorDetection=!floorDetection
+func changeMotion():
+	maxSpeed=-30

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiledemo.png-8e68e4a1e74cb1b4f9ee4c922d2e372e.stex"
+path="res://.import/tiledemo.png-fd1122183be7f70cc73ce13675471b0c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Super Grotto Escape Files/Environment/Layers/tiledemo.png"
-dest_files=[ "res://.import/tiledemo.png-8e68e4a1e74cb1b4f9ee4c922d2e372e.stex" ]
+source_file="res://Super Grotto Escape Files/Environment/Force-Field/tiledemo.png"
+dest_files=[ "res://.import/tiledemo.png-fd1122183be7f70cc73ce13675471b0c.stex" ]
 
 [params]
 
