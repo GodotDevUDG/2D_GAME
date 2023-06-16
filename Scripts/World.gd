@@ -21,3 +21,8 @@ func _on_Area2D_objetiu_assolit(player):
 	_pers.restaurar_energia()
 	remove_child(_pers) 
 	get_node("/root/inici").canvia_nivell()
+
+
+func _on_Lava_body_entered(body):
+	if body.name == "Player":
+		body.suma_vides(-1)

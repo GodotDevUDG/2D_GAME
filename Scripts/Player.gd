@@ -139,7 +139,7 @@ func shootBullet():
 #Barra energia
 
 var energia = 0
-export var disminucion_energia = 50
+export var disminucion_energia = 10
 
 func _ready():
 	$TextureProgress/Timer.connect("timeout", self, "disminuir_energia")
@@ -154,8 +154,8 @@ func disminuir_energia():
 		highShoot = true
 
 func sumar_energia():
-	energia = $TextureProgress.value + 25
-	$TextureProgress.value += 25
+	energia = $TextureProgress.value + 35
+	$TextureProgress.value += 35
 
 func restaurar_energia():
 	energia = 0
