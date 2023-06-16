@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/Slime/slime1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=2]
@@ -7,10 +7,11 @@
 [ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/Slime/slime4.png" type="Texture" id=5]
 [ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/Slime/slime5.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/slime.wav" type="AudioStream" id=7]
+[ext_resource path="res://Super Grotto Escape Files/Characters/Enemies/sprites/Slime/slime-Damage.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "Damage",
 "speed": 10.0

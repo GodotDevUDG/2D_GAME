@@ -6,8 +6,8 @@ const NUM_NIVELLS := 2
 # variables globals-escena
 const ESC_PERS:= preload("res://Scenes/Personaje.tscn")
 const ESC_LEVEL1:= preload("res://Scenes/World.tscn")
-#const ESC_LEVEL2:= preload("res://Scenes/World2.tscn")
-#const ESC_LEVEL3:= preload("res://Scenes/World3.tscn")
+const ESC_LEVEL2:= preload("res://Scenes/World2.tscn")
+const ESC_LEVELFINAL:= preload("res://Scenes/WorldFINAL.tscn")
 
 # variables globals del joc 
 var _nivells:Array # array de packed scenes corresponents als nivells
@@ -19,8 +19,8 @@ var _nivellActual:int
 func _ready():
 	_nivellActual = 1
 	_nivells.append(ESC_LEVEL1)
-	#_nivells.append(ESC_LEVEL2)
-	#_nivells.append(ESC_LEVEL3)
+	_nivells.append(ESC_LEVEL2)
+	_nivells.append(ESC_LEVELFINAL)
 	_personatge = ESC_PERS.instance()
 	
 func canvia_nivell():

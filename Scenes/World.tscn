@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://TILESET.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Energy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/music.wav" type="AudioStream" id=3]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Super Grotto Escape Files/Environment/Layers/back.png" type="Texture" id=5]
+[ext_resource path="res://Super Grotto Escape Files/Environment/Layers/far.png" type="Texture" id=6]
+[ext_resource path="res://Super Grotto Escape Files/Props/Sprites/big-crate.png" type="Texture" id=7]
+[ext_resource path="res://Super Grotto Escape Files/Props/Sprites/back-panels.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Medal.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scripts/World.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -22,22 +26,82 @@ texture = ExtResource( 5 )
 position = Vector2( 271, 0 )
 texture = ExtResource( 5 )
 
+[node name="Fondo5" type="Sprite" parent="Fondo"]
+position = Vector2( 569, 0 )
+texture = ExtResource( 5 )
+
+[node name="Fondo8" type="Sprite" parent="Fondo"]
+position = Vector2( 866, 8 )
+texture = ExtResource( 5 )
+
+[node name="Fondo3" type="Sprite" parent="Fondo"]
+position = Vector2( 271, -180 )
+texture = ExtResource( 5 )
+flip_v = true
+
+[node name="Fondo6" type="Sprite" parent="Fondo"]
+position = Vector2( 568, -180 )
+texture = ExtResource( 5 )
+flip_v = true
+
+[node name="Fondo7" type="Sprite" parent="Fondo"]
+position = Vector2( 866, -180 )
+texture = ExtResource( 5 )
+flip_v = true
+
+[node name="Fondo4" type="Sprite" parent="Fondo"]
+position = Vector2( 0, -180 )
+texture = ExtResource( 5 )
+flip_v = true
+
+[node name="Far" type="Sprite" parent="Fondo"]
+position = Vector2( 20, -2 )
+texture = ExtResource( 6 )
+
+[node name="Far2" type="Sprite" parent="Fondo"]
+position = Vector2( 274, -8 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="Far3" type="Sprite" parent="Fondo"]
+position = Vector2( 649, -8 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="Big-crate3" type="Sprite" parent="."]
+position = Vector2( -60, -17 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="Big-crate" type="Sprite" parent="."]
+position = Vector2( -69, -6 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="Big-crate2" type="Sprite" parent="."]
+position = Vector2( -53, -3 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="Back-panels" type="Sprite" parent="."]
+position = Vector2( 643, -147 )
+texture = ExtResource( 8 )
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 1, 0 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -327689, 12, 0, -327687, 13, 0, -196617, 14, 0, -196615, 15, 0, -196601, 536870916, 0, -196600, 536870916, 0, -65545, 16, 0, -65543, 17, 0, 65528, 10, 0, 65530, 10, 0, 65532, 10, 0, 65534, 5, 0, 0, 5, 0, 2, 5, 0, 4, 5, 0, 6, 6, 0, 8, 6, 0, 10, 5, 0, 12, 536870917, 0, 14, 536870917, 0, 16, 536870917, 0, 18, 536870917, 0, 20, 10, 0, 22, 10, 0, 24, 10, 0, 26, 10, 0, 28, 10, 0, 30, 10, 0, 32, 10, 0, 196600, 11, 0, 196602, 11, 0, 196604, 11, 0, 196606, 11, 0, 131072, 11, 0, 131074, 11, 0, 131075, 11, 0, 131077, 11, 0, 131079, 11, 0, 131081, 11, 0, 131083, 11, 0, 131085, 11, 0, 131086, 11, 0, 131088, 11, 0, 131090, 11, 0, 131092, 11, 0, 131093, 11, 0, 131094, 11, 0, 131095, 11, 0, 131096, 11, 0, 131097, 11, 0, 131098, 11, 0, 131099, 11, 0, 131100, 11, 0, 131101, 11, 0, 131102, 11, 0, 131103, 11, 0, 131104, 11, 0 )
+tile_data = PoolIntArray( -917459, 12, 0, -917457, 13, 0, -786421, 4, 0, -786420, 4, 0, -786387, 14, 0, -786385, 15, 0, -655315, 14, 0, -655313, 15, 0, -589820, 18, 0, -589818, 19, 0, -524253, 18, 0, -524251, 19, 0, -524249, 5, 0, -524247, 5, 0, -524245, 5, 0, -524243, 14, 0, -524241, 15, 0, -327689, 12, 0, -327687, 13, 0, -393205, 9, 0, -393203, 9, 0, -393201, 9, 0, -393188, 9, 0, -393187, 9, 0, -393186, 9, 0, -393171, 14, 0, -393169, 15, 0, -327658, 4, 0, -327657, 4, 0, -196617, 14, 0, -196615, 15, 0, -262116, 9, 0, -262114, 9, 0, -262099, 14, 0, -262097, 15, 0, -196601, 536870916, 0, -196600, 536870916, 0, -196588, 4, 0, -65545, 16, 0, -65543, 17, 0, -131044, 9, 0, -131043, 9, 0, -131042, 9, 0, -131027, 16, 0, -131026, 16, 0, -131025, 17, 0, 65528, 5, 0, 65530, 5, 0, 65532, 5, 0, 65534, 5, 0, 0, 5, 0, 2, 5, 0, 4, 5, 0, 6, 6, 0, 8, 6, 0, 10, 5, 0, 12, 536870917, 0, 14, 536870917, 0, 16, 536870917, 0, 18, 536870917, 0, 20, 5, 0, 22, 5, 0, 24, 6, 0, 26, 6, 0, 28, 9, 0, 30, 9, 0, 32, 6, 0, 34, 6, 0, 36, 5, 0, 38, 5, 0, 40, 5, 0, 42, 6, 0, 44, 6, 0, 46, 5, 0, 48, 5, 0, 50, 5, 0, 52, 5, 0, 196600, 11, 0, 196602, 11, 0, 196604, 11, 0, 196606, 11, 0, 131072, 11, 0, 131074, 11, 0, 131075, 11, 0, 131077, 11, 0, 131079, 11, 0, 131081, 11, 0, 131083, 11, 0, 131085, 11, 0, 131086, 11, 0, 131088, 11, 0, 131090, 11, 0, 131092, 11, 0, 131093, 11, 0, 131094, 11, 0, 131095, 11, 0, 131096, 11, 0, 131097, 11, 0, 131098, 11, 0, 131099, 11, 0, 131100, 11, 0, 131101, 11, 0, 131102, 11, 0, 131103, 11, 0, 131104, 11, 0, 131106, 11, 0, 131107, 11, 0, 131108, 11, 0, 131109, 11, 0, 131110, 11, 0, 131111, 11, 0, 131112, 11, 0, 131113, 11, 0, 131114, 11, 0, 131115, 11, 0, 131116, 11, 0, 131117, 11, 0, 131118, 11, 0, 131120, 11, 0, 131121, 11, 0, 131122, 11, 0, 131123, 11, 0, 131124, 11, 0 )
+
+[node name="Energy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 129, -62 )
 
 [node name="StartPoint" type="Position2D" parent="."]
-position = Vector2( 23, -22 )
+position = Vector2( -1, -22 )
 
-[node name="Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 249, -13 )
-
-[node name="Enemy2" parent="." instance=ExtResource( 4 )]
-visible = false
-position = Vector2( 249, -13 )
+[node name="Enemy1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 133, -59 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
@@ -51,7 +115,50 @@ position = Vector2( 111, 12 )
 position = Vector2( 18, 1 )
 shape = SubResource( 1 )
 
-[node name="Energy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 129, -62 )
+[node name="Lava3" type="Area2D" parent="."]
+position = Vector2( 301, 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lava3"]
+position = Vector2( 244, -4 )
+shape = SubResource( 1 )
+
+[node name="Lava4" type="Area2D" parent="."]
+position = Vector2( 301, 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lava4"]
+position = Vector2( 404, -4 )
+shape = SubResource( 1 )
+
+[node name="Lava2" type="Area2D" parent="."]
+position = Vector2( 318, 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lava2"]
+position = Vector2( 99, 2 )
+shape = SubResource( 1 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 229, -11 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 485, -108 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 100, -157 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 229, -108 )
+
+[node name="Energy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, -206 )
+
+[node name="Energy3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 483, -110 )
+
+[node name="Area2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 643, -180 )
 
 [connection signal="body_entered" from="Lava" to="." method="_on_Lava_body_entered"]
+[connection signal="body_entered" from="Lava3" to="." method="_on_Lava_body_entered"]
+[connection signal="body_entered" from="Lava4" to="." method="_on_Lava_body_entered"]
+[connection signal="body_entered" from="Lava2" to="." method="_on_Lava_body_entered"]
+[connection signal="objetiu_assolit" from="Area2D" to="." method="_on_GOAL_objetiu_assolit"]
