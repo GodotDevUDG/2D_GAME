@@ -8,7 +8,7 @@
 [ext_resource path="res://Scripts/World.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 10.25 )
+extents = Vector2( 72, 10.25 )
 
 [node name="World" type="Node2D" groups=["World", "World2"]]
 position = Vector2( 1, 0 )
@@ -27,17 +27,16 @@ position = Vector2( 1, 0 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -327689, 12, 0, -327687, 13, 0, -196617, 14, 0, -196615, 15, 0, -196601, 536870916, 0, -196600, 536870916, 0, -65545, 16, 0, -65543, 17, 0, 65528, 10, 0, 65530, 10, 0, 65532, 10, 0, 65534, 5, 0, 0, 5, 0, 2, 5, 0, 4, 5, 0, 6, 6, 0, 8, 6, 0, 10, 5, 0, 12, 536870917, 0, 14, 536870917, 0, 16, 536870917, 0, 18, 536870917, 0, 20, 10, 0, 22, 10, 0, 24, 10, 0, 26, 10, 0, 28, 10, 0, 30, 10, 0, 32, 10, 0, 196600, 11, 0, 196602, 11, 0, 196604, 11, 0, 196606, 11, 0, 131072, 11, 0, 131074, 11, 0, 131075, 11, 0, 131077, 11, 0, 131079, 11, 0, 131081, 11, 0, 131083, 11, 0, 131085, 11, 0, 131086, 11, 0, 131088, 11, 0, 131090, 11, 0, 131092, 11, 0, 131093, 11, 0, 131094, 11, 0, 131095, 11, 0, 131096, 11, 0, 131097, 11, 0, 131098, 11, 0, 131099, 11, 0, 131100, 11, 0, 131101, 11, 0, 131102, 11, 0, 131103, 11, 0, 131104, 11, 0 )
+tile_data = PoolIntArray( -327689, 12, 0, -327687, 13, 0, -393215, 4, 0, -393214, 4, 0, -196617, 14, 0, -196615, 15, 0, -196603, 4, 0, -196602, 4, 0, -196601, 4, 0, -196600, 4, 0, -196599, 4, 0, -65545, 16, 0, -65543, 17, 0, 65528, 9, 0, 65529, 9, 0, 65530, 9, 0, 65531, 9, 0, 65532, 9, 0, 65533, 9, 0, 65534, 9, 0, 65535, 9, 0, 1, 9, 0, 3, 6, 0, 5, 6, 0, 6, 6, 0, 8, 6, 0, 10, 6, 0, 12, 536870917, 0, 14, 536870917, 0, 16, 536870917, 0, 18, 536870917, 0, 20, 10, 0, 22, 10, 0, 24, 10, 0, 26, 10, 0, 28, 10, 0, 30, 10, 0, 32, 10, 0, 196600, 11, 0, 196602, 11, 0, 196604, 11, 0, 196606, 11, 0, 131072, 11, 0, 131074, 11, 0, 131075, 11, 0, 131077, 11, 0, 131079, 11, 0, 131081, 11, 0, 131083, 11, 0, 131085, 11, 0, 131086, 11, 0, 131088, 11, 0, 131090, 11, 0, 131092, 11, 0, 131093, 11, 0, 131094, 11, 0, 131095, 11, 0, 131096, 11, 0, 131097, 11, 0, 131098, 11, 0, 131099, 11, 0, 131100, 11, 0, 131101, 11, 0, 131102, 11, 0, 131103, 11, 0, 131104, 11, 0 )
 
 [node name="StartPoint" type="Position2D" parent="."]
 position = Vector2( 23, -22 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 249, -13 )
+position = Vector2( 530, -14 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 4 )]
-visible = false
-position = Vector2( 249, -13 )
+position = Vector2( 144, -61 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
@@ -48,10 +47,10 @@ autoplay = true
 position = Vector2( 111, 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lava"]
-position = Vector2( 18, 1 )
+position = Vector2( 10, 1 )
 shape = SubResource( 1 )
 
 [node name="Energy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 129, -62 )
+position = Vector2( 152, -57 )
 
 [connection signal="body_entered" from="Lava" to="." method="_on_Lava_body_entered"]
