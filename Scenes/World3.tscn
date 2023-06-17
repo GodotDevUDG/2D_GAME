@@ -12,7 +12,7 @@
 [ext_resource path="res://Scripts/World.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 10.25 )
+extents = Vector2( 320, 10.25 )
 
 [node name="World" type="Node2D" groups=["World", "World2"]]
 position = Vector2( 1, 0 )
@@ -39,8 +39,18 @@ position = Vector2( 271, -180 )
 texture = ExtResource( 5 )
 flip_v = true
 
+[node name="Fondo9" type="Sprite" parent="Fondo"]
+position = Vector2( 271, -372 )
+texture = ExtResource( 5 )
+flip_v = true
+
 [node name="Fondo6" type="Sprite" parent="Fondo"]
 position = Vector2( 568, -180 )
+texture = ExtResource( 5 )
+flip_v = true
+
+[node name="Fondo10" type="Sprite" parent="Fondo"]
+position = Vector2( 568, -372 )
 texture = ExtResource( 5 )
 flip_v = true
 
@@ -51,6 +61,11 @@ flip_v = true
 
 [node name="Fondo4" type="Sprite" parent="Fondo"]
 position = Vector2( 0, -180 )
+texture = ExtResource( 5 )
+flip_v = true
+
+[node name="Fondo11" type="Sprite" parent="Fondo"]
+position = Vector2( 0, -372 )
 texture = ExtResource( 5 )
 flip_v = true
 
@@ -84,7 +99,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 
 [node name="Back-panels" type="Sprite" parent="."]
-position = Vector2( 643, -147 )
+position = Vector2( 548, -295 )
 texture = ExtResource( 8 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -92,16 +107,16 @@ position = Vector2( 1, 0 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -917459, 12, 0, -917457, 13, 0, -786421, 4, 0, -786420, 4, 0, -786387, 14, 0, -786385, 15, 0, -655315, 14, 0, -655313, 15, 0, -589820, 18, 0, -589818, 19, 0, -524253, 18, 0, -524251, 19, 0, -524249, 5, 0, -524247, 5, 0, -524245, 5, 0, -524243, 14, 0, -524241, 15, 0, -327689, 12, 0, -327687, 13, 0, -393205, 9, 0, -393203, 9, 0, -393201, 9, 0, -393188, 9, 0, -393187, 9, 0, -393186, 9, 0, -393171, 14, 0, -393169, 15, 0, -327658, 4, 0, -327657, 4, 0, -196617, 14, 0, -196615, 15, 0, -262116, 9, 0, -262114, 9, 0, -262099, 14, 0, -262097, 15, 0, -196601, 536870916, 0, -196600, 536870916, 0, -196588, 4, 0, -65545, 16, 0, -65543, 17, 0, -131044, 9, 0, -131043, 9, 0, -131042, 9, 0, -131027, 16, 0, -131026, 16, 0, -131025, 17, 0, 65528, 5, 0, 65530, 5, 0, 65532, 5, 0, 65534, 5, 0, 0, 5, 0, 2, 5, 0, 4, 5, 0, 6, 6, 0, 8, 6, 0, 10, 5, 0, 12, 536870917, 0, 14, 536870917, 0, 16, 536870917, 0, 18, 536870917, 0, 20, 5, 0, 22, 5, 0, 24, 6, 0, 26, 6, 0, 28, 9, 0, 30, 9, 0, 32, 6, 0, 34, 6, 0, 36, 5, 0, 38, 5, 0, 40, 5, 0, 42, 6, 0, 44, 6, 0, 46, 5, 0, 48, 5, 0, 50, 5, 0, 52, 5, 0, 196600, 11, 0, 196602, 11, 0, 196604, 11, 0, 196606, 11, 0, 131072, 11, 0, 131074, 11, 0, 131075, 11, 0, 131077, 11, 0, 131079, 11, 0, 131081, 11, 0, 131083, 11, 0, 131085, 11, 0, 131086, 11, 0, 131088, 11, 0, 131090, 11, 0, 131092, 11, 0, 131093, 11, 0, 131094, 11, 0, 131095, 11, 0, 131096, 11, 0, 131097, 11, 0, 131098, 11, 0, 131099, 11, 0, 131100, 11, 0, 131101, 11, 0, 131102, 11, 0, 131103, 11, 0, 131104, 11, 0, 131106, 11, 0, 131107, 11, 0, 131108, 11, 0, 131109, 11, 0, 131110, 11, 0, 131111, 11, 0, 131112, 11, 0, 131113, 11, 0, 131114, 11, 0, 131115, 11, 0, 131116, 11, 0, 131117, 11, 0, 131118, 11, 0, 131120, 11, 0, 131121, 11, 0, 131122, 11, 0, 131123, 11, 0, 131124, 11, 0 )
+tile_data = PoolIntArray( -1114084, 5, 0, -1114082, 5, 0, -1114080, 5, 0, -1114078, 5, 0, -1114076, 5, 0, -1114074, 5, 0, -917483, 4, 0, -917482, 4, 0, -917481, 4, 0, -917480, 4, 0, -917459, 12, 0, -917457, 13, 0, -786417, 4, 0, -786416, 4, 0, -786415, 4, 0, -786414, 4, 0, -786387, 14, 0, -786385, 15, 0, -720869, 4, 0, -720868, 4, 0, -720867, 4, 0, -655315, 14, 0, -655313, 15, 0, -589816, 4, 0, -589815, 4, 0, -589814, 4, 0, -589813, 4, 0, -524256, 4, 0, -524255, 4, 0, -524254, 4, 0, -524253, 4, 0, -524252, 4, 0, -524243, 14, 0, -524241, 15, 0, -458711, 4, 0, -327689, 12, 0, -327687, 13, 0, -393216, 4, 0, -393215, 4, 0, -393214, 4, 0, -393213, 4, 0, -393212, 4, 0, -393171, 14, 0, -393169, 15, 0, -327657, 5, 0, -327656, 5, 0, -327655, 5, 0, -327654, 5, 0, -327653, 5, 0, -196617, 14, 0, -196615, 15, 0, -262100, 9, 0, -262099, 14, 0, -262097, 15, 0, -196600, 5, 0, -196598, 18, 0, -196596, 19, 0, -196594, 5, 0, -196592, 5, 0, -196591, 5, 0, -196564, 9, 0, -65545, 16, 0, -65543, 17, 0, -131028, 9, 0, -131027, 16, 0, -131026, 16, 0, -131025, 17, 0, -65502, 4, 0, -65501, 4, 0, -65500, 4, 0, -65496, 4, 0, -65495, 4, 0, -65494, 4, 0, -65492, 9, 0, 65528, 5, 0, 65530, 5, 0, 65532, 5, 0, 65534, 5, 0, 0, 5, 0, 2, 5, 0, 4, 5, 0, 6, 6, 0, 8, 6, 0, 10, 6, 0, 11, 6, 0, 12, 6, 0, 13, 6, 0, 14, 6, 0, 15, 6, 0, 16, 6, 0, 17, 6, 0, 18, 6, 0, 19, 6, 0, 20, 6, 0, 21, 6, 0, 22, 6, 0, 23, 6, 0, 24, 6, 0, 25, 6, 0, 26, 6, 0, 27, 6, 0, 28, 6, 0, 29, 6, 0, 30, 6, 0, 32, 6, 0, 33, 6, 0, 34, 6, 0, 35, 6, 0, 36, 6, 0, 37, 6, 0, 38, 6, 0, 39, 6, 0, 40, 6, 0, 41, 6, 0, 42, 6, 0, 43, 6, 0, 44, 6, 0, 46, 5, 0, 48, 5, 0, 50, 5, 0, 52, 5, 0, 196600, 11, 0, 196602, 11, 0, 196604, 11, 0, 196606, 11, 0, 131072, 11, 0, 131074, 11, 0, 131075, 11, 0, 131077, 11, 0, 131078, 11, 0, 131079, 11, 0, 131080, 11, 0, 131081, 11, 0, 131082, 11, 0, 131083, 11, 0, 131084, 11, 0, 131085, 11, 0, 131086, 11, 0, 131087, 11, 0, 131088, 11, 0, 131090, 11, 0, 131092, 11, 0, 131093, 11, 0, 131094, 11, 0, 131095, 11, 0, 131096, 11, 0, 131097, 11, 0, 131098, 11, 0, 131099, 11, 0, 131100, 11, 0, 131101, 11, 0, 131102, 11, 0, 131103, 11, 0, 131104, 11, 0, 131106, 11, 0, 131107, 11, 0, 131108, 11, 0, 131109, 11, 0, 131110, 11, 0, 131111, 11, 0, 131112, 11, 0, 131113, 11, 0, 131114, 11, 0, 131115, 11, 0, 131116, 11, 0, 131117, 11, 0, 131118, 11, 0, 131120, 11, 0, 131121, 11, 0, 131122, 11, 0, 131123, 11, 0, 131124, 11, 0 )
 
 [node name="Energy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 129, -62 )
+position = Vector2( 199, -57 )
 
 [node name="StartPoint" type="Position2D" parent="."]
 position = Vector2( -1, -22 )
 
 [node name="Enemy1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 133, -59 )
+position = Vector2( 159, -63 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
@@ -112,53 +127,47 @@ autoplay = true
 position = Vector2( 111, 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lava"]
-position = Vector2( 18, 1 )
-shape = SubResource( 1 )
-
-[node name="Lava3" type="Area2D" parent="."]
-position = Vector2( 301, 17 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lava3"]
-position = Vector2( 244, -4 )
-shape = SubResource( 1 )
-
-[node name="Lava4" type="Area2D" parent="."]
-position = Vector2( 301, 17 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lava4"]
-position = Vector2( 404, -4 )
-shape = SubResource( 1 )
-
-[node name="Lava2" type="Area2D" parent="."]
-position = Vector2( 318, 11 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lava2"]
-position = Vector2( 99, 2 )
+position = Vector2( 306, 2 )
 shape = SubResource( 1 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 229, -11 )
+position = Vector2( 454, -94 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 584, -144 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 472, -195 )
+
+[node name="Enemy9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 395, -239 )
+
+[node name="Enemy10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 631, -287 )
+
+[node name="Enemy11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 463, -288 )
+
+[node name="Enemy8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 297, -209 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 485, -108 )
+position = Vector2( 184, -159 )
 
 [node name="Enemy5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 100, -157 )
+position = Vector2( 9, -110 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 229, -108 )
+position = Vector2( 296, -63 )
 
 [node name="Energy2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 192, -206 )
+position = Vector2( 11, -105 )
 
 [node name="Energy3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 483, -110 )
+position = Vector2( 615, -71 )
 
 [node name="Area2D" parent="." instance=ExtResource( 9 )]
-position = Vector2( 643, -180 )
+position = Vector2( 548, -328 )
 
 [connection signal="body_entered" from="Lava" to="." method="_on_Lava_body_entered"]
-[connection signal="body_entered" from="Lava3" to="." method="_on_Lava_body_entered"]
-[connection signal="body_entered" from="Lava4" to="." method="_on_Lava_body_entered"]
-[connection signal="body_entered" from="Lava2" to="." method="_on_Lava_body_entered"]
 [connection signal="objetiu_assolit" from="Area2D" to="." method="_on_GOAL_objetiu_assolit"]
