@@ -16,7 +16,7 @@ func _ready():
 	_pers.set_pos_start($StartPoint.position)
 	_pers.changeZoom(1.5)
 	add_child(_pers) 
-	for i in range(1):
+	for i in range(10):
 		yield(get_tree().create_timer(2.0), "timeout")
 		print(i)
 		generateEnemy()
@@ -51,11 +51,8 @@ func generateEnemy():
 	enem.global_position.y = -130
 	enem.changeFloorDetection()
 	get_tree().call_group("World2","add_child",enem)
-	print("aaa")
-	pass
 
 func generateBoss():
-	print("a")
 	boss = Boss.instance()
 	boss.global_position.x=224
 	boss.global_position.y=-231

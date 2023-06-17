@@ -9,12 +9,14 @@ onready var Enemy = $AnimatedSprite
 var hit=0
 var floorDetection=true;
 var entered = false;
+var aux = true
 
 
 func _ready():
 	Enemy.play("Run")
 	Enemy.scale.x= -1
 	motion.x = -maxSpeed
+	uptade_AUX()
 	
 	
 func _process(delta):
@@ -36,21 +38,24 @@ func _process(delta):
 
 func _flip():
 	
-	if str($LeftRay.get_collider()).substr(0, 6) == "Player":
+	if str($LeftRay.get_collider()).substr(0, 6) == "Player" and aux:
 		$LeftRay.get_collider().suma_vides(-1)
 		motion.x *= -1
 		Enemy.scale.x *= -1
 		$PlayerDetection.transform.x*=-1
-	elif str($RightRay.get_collider()).substr(0, 6) == "Player":
+		aux = false
+	elif str($RightRay.get_collider()).substr(0, 6) == "Player" and aux:
 		$RightRay.get_collider().suma_vides(-1)
 		motion.x *= -1
 		Enemy.scale.x *= -1
 		$PlayerDetection.transform.x*=-1
-	elif str($TopRay.get_collider()).substr(0, 6) == "Player":
+		aux = false
+	elif str($TopRay.get_collider()).substr(0, 6) == "Player" and aux:
 		$TopRay.get_collider().suma_vides(-1)
 		motion.x *= -1
 		Enemy.scale.x *= -1
 		$PlayerDetection.transform.x*=-1
+		aux = false
 	elif $LeftRay.is_colliding() or $RightRay.is_colliding() or (!$AnimatedSprite/FloorDetection.is_colliding() && floorDetection) && !entered:
 		motion.x *= -1
 		Enemy.scale.x *= -1
@@ -82,3 +87,9 @@ func changeFloorDetection():
 	floorDetection=!floorDetection
 func changeMotion():
 	maxSpeed=-30
+
+
+func uptade_AUX():
+	yield(get_tree().create_timer(1.0), "timeout")
+	aux =  true
+	uptade_AUX()
