@@ -28,6 +28,7 @@ func _on_Bullet_body_entered(body):
 		speed=0
 		var player = body
 		player.suma_vides(-1)
+		start_timer()
 		
 	elif body.get_name().substr(0, 4) == "Boss" || body.get_name().substr(0, 4) == "Tile":
 		pass
@@ -35,5 +36,5 @@ func _on_Bullet_body_entered(body):
 		print(body.get_name())
 		$AnimatedSprite.play("Explosion")
 		speed=0
+		start_timer()
 		
-	start_timer()

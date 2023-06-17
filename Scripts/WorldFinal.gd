@@ -5,6 +5,10 @@ export (PackedScene) var Enemy
 export (PackedScene) var Boss
 var rng = RandomNumberGenerator.new()
 var aux = 0
+var finished=false
+var startCompro = false
+var boss
+
 func _ready():
 	var scr = get_node("/root/inici")
 	_pers = scr._personatge
@@ -12,12 +16,13 @@ func _ready():
 	_pers.set_pos_start($StartPoint.position)
 	_pers.changeZoom(1.5)
 	add_child(_pers) 
-	for i in range(10):
+	for i in range(1):
 		yield(get_tree().create_timer(2.0), "timeout")
 		print(i)
 		generateEnemy()
 		aux+=1
 	generateBoss()
+	startCompro = true
 	
 
 func _on_GOAL_objetiu_assolit(player):
@@ -51,8 +56,14 @@ func generateEnemy():
 
 func generateBoss():
 	print("a")
-	var boss = Boss.instance()
+	boss = Boss.instance()
 	boss.global_position.x=224
 	boss.global_position.y=-231
 	get_tree().call_group("World2","add_child",boss)
 	pass
+func _process(delta):
+	if(self.get_child(8)==null && !finished && startCompro):
+		finished=true
+		yield(get_tree().create_timer(1.0), "timeout")
+		get_tree().change_scene("res://Scenes/Win.tscn")
+		
