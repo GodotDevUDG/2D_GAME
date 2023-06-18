@@ -18,7 +18,6 @@ func _ready():
 	add_child(_pers) 
 	for i in range(0):
 		yield(get_tree().create_timer(2.0), "timeout")
-		print(i)
 		generateEnemy()
 		aux+=1
 	generateBoss()

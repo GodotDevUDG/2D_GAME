@@ -26,7 +26,6 @@ func _ready():
 	_personatge = ESC_PERS.instance()
 	
 func canvia_nivell():
-	print("canvia nivell")
 	_nivellActual += 1
 	if _nivellActual > NUM_NIVELLS: # esquema circular 
 		get_tree().change_scene("res://Scenes/Win.tscn")
