@@ -13,6 +13,7 @@ var hit=0
 var floorDetection=false;
 var isShooting = true
 var direction = false
+var velocityIncrease=0
 
 func _ready():
 	Enemy.play("Run")
@@ -50,16 +51,15 @@ func _process(delta):
 		if(playerDetection()):
 			maxSpeed=80
 			if(motion.x<0):
-				motion.x=-maxSpeed
+				motion.x=-maxSpeed-velocityIncrease
 			else:
-				motion.x=maxSpeed
+				motion.x=maxSpeed+velocityIncrease
 		else:
 			maxSpeed=30
 			if(motion.x<0):
-				motion.x=-maxSpeed
+				motion.x=-maxSpeed-velocityIncrease
 			else:
-				motion.x=maxSpeed
-
+				motion.x=maxSpeed+velocityIncrease
 func _flip():
 	if str($LeftRay.get_collider()).substr(0, 6) == "Player":
 		direction = !direction
@@ -109,10 +109,7 @@ func auxFlip():
 func Damage_Gun():
 	Enemy.stop()
 	Enemy.play("Damage")
-	var dir = motion.x
-	motion.x = 0
 	yield(Enemy,"animation_finished")
-	motion.x = dir
 	Enemy.play("Run")
 
 func playerDetection():

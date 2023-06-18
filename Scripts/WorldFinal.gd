@@ -16,7 +16,7 @@ func _ready():
 	_pers.set_pos_start($StartPoint.position)
 	_pers.changeZoom(1.5)
 	add_child(_pers) 
-	for i in range(10):
+	for i in range(0):
 		yield(get_tree().create_timer(2.0), "timeout")
 		print(i)
 		generateEnemy()
