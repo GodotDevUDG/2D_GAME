@@ -13,7 +13,7 @@
 [ext_resource path="res://Scripts/World.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 103.25, 8.125 )
+extents = Vector2( 102.125, 8.125 )
 
 [node name="World" type="Node2D" groups=["World", "World2"]]
 position = Vector2( 1, 0 )
@@ -119,7 +119,7 @@ shape = SubResource( 1 )
 position = Vector2( 111, 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lava3"]
-position = Vector2( 519, 0 )
+position = Vector2( 520.125, 0 )
 shape = SubResource( 1 )
 
 [node name="Lava2" type="Area2D" parent="."]
