@@ -70,10 +70,7 @@ func _physics_process(delta):
 func Damage_Gun():
 	Enemy.stop()
 	Enemy.play("Damage")
-	var dir = motion.x
-	motion.x = 0
 	yield(Enemy,"animation_finished")
-	motion.x = dir
 	Enemy.play("Run")
 
 func playerDetection():

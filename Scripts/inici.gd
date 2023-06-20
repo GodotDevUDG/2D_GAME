@@ -31,6 +31,4 @@ func canvia_nivell():
 		get_tree().change_scene("res://Scenes/Win.tscn")
 	elif get_tree().change_scene_to(_nivells[_nivellActual-1]): # Array comença per 0
 		print("canvi exitós")
-	else:
-		print("no s'ha pogut canviar")
 	
